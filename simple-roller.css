@@ -1,4 +1,4 @@
-@keyframes keyfame-roll {
+@keyframes roll {
     0% {
         transform: rotate(0deg);
     }
@@ -8,9 +8,12 @@
     100% {
         transform: rotate(3600deg);
     }
-  }
+}
 
-svg {
+polygon {
     transform-origin: center;
 }
 
+.roll {
+    animation: roll 1s;
+}
