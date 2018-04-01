@@ -1,0 +1,35 @@
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(3600deg);
+    }
+}
+
+polygon {
+    transform-origin: center;
+}
+
+.die-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.die-container::after {
+    content: attr(data-score);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -10px;
+    pointer-events: none;
+}
+
+.roll {
+    animation: roll 1s;
+}
